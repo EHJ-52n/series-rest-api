@@ -52,10 +52,10 @@
     <properties>
         <!-- dev | ci | prod -->
         <env>dev</env>
-        
+
         <!-- optional properties file -->
         <local.configFile>file:${user.home}/${project.build.finalName}.properties</local.configFile>
-    
+
         <version.swc>3.2.0</version.swc>
         <version.spring>4.2.5.RELEASE</version.spring>
         <version.logback>1.2.3</version.logback>
@@ -471,7 +471,7 @@
 			    <groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-surefire-plugin</artifactId>
 			    <configuration>
-			        <forkCount>3</forkCount>
+			        <forkCount>1</forkCount>
 			        <reuseForks>true</reuseForks>
 			        <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 			    </configuration>
@@ -488,7 +488,7 @@
                     </execution>
                 </executions>
             </plugin>
-            
+
             <plugin>
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
@@ -742,4 +742,3 @@
     </repositories>
 
 </project>
-
